@@ -1,0 +1,111 @@
+---
+// import header_image from '../assets/images/header.png'; 
+import header_image from '../assets/images/potato.webp'; 
+---
+
+<section id="home" class="section__container header__container">
+    <div class="header__content">
+        <h1>
+            We love helping <br>
+            you to save the <br>
+            earth
+        </h1>
+        <p class="header__subtext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cupiditate sequi repellat, praesentium totam a vitae explicabo? Nostrum ab quam.
+        </p>
+        <div class="header__buttons">
+            <button class="btn btn-primary">Join Now</button>
+            <button class="btn">
+                See how it works
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </div>
+    <div class="header__image">
+        <!-- <span class="image__shape"></span> -->
+        <img src={header_image.src} alt="">
+    </div>
+</section>
+<style>
+    header {
+        background: #fff;
+    }
+    .header__container {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-area: 1rem; */
+    }
+    .header__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .header__content h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 800;
+        color: var(--text-dark);
+    }
+    .header__image {
+        position: relative;
+    }
+    .header__image::after {
+        content: '';
+        position: absolute;
+        top: 10rem;
+        left: 43%;
+        height: 400px;
+        width: 400px;
+        background: var(--primary-color);
+        background: #004439;
+        background-image: linear-gradient(to left bottom, #e8b964, #e5b667, #e1b26a, #deaf6c, #daac6f);
+        border-radius: 22% 78% 59% 41% / 13% 33% 67% 87% ;
+        opacity: .5;
+        z-index: 0;
+    }
+    .header__image img {
+        position: absolute;
+        top: 50%;
+        height: 50%;
+        max-width: 100%;
+        transform: translate(20%, -70%);
+        z-index: 1;
+    }
+    @media (width < 1200px){
+        .header__image::after {
+            top: 10rem;
+            left: 0;
+            height: 400px;
+            width: 400px;
+            background: var(--primary-color);
+            background: #004439;
+            background-image: linear-gradient(to left bottom, #e8b964, #e5b667, #e1b26a, #deaf6c, #daac6f);
+            border-radius: 22% 78% 59% 41% / 13% 33% 67% 87% ;
+            opacity: .5;
+            z-index: 0;
+        }
+        .header__image img {
+            max-width: 420px;
+            height: auto;
+            transform: translate(0%, 0%);
+        }
+    }
+    @media (width < 900px) {
+        .header__container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .header__image {
+            order: 0;
+        }
+        .header__content {
+            order: 1;
+        }
+        .header__image img {
+            max-width: 420px;
+            height: auto;
+            transform: translate(50%, 50%);
+        }
+    }
+</style>

@@ -1,0 +1,103 @@
+---
+import woman from '../assets/images/woman-2.webp';
+---
+
+<section id="contact" class="section__contact">
+    <h1 class="section__title text-center">Contact Us</h1>
+    <p class="section__subtitle text-center" style="margin-top: .5rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="contact__grid">
+        <div class="contact__info">   
+            <p class="info__title">¿Commodi <span>doloribus</span> repellendus voluptate dolorem necessitatibus, deleniti explicabo nulla?</p>         
+            <ul class="info__list">
+                <li>
+                    <i class="ri-phone-fill"></i>
+                    480-602-154
+                </li>
+                <li>
+                    <i class="ri-mail-fill"></i>
+                    contact@agrolab.com
+                </li>
+                <li>
+                    <i class="ri-map-pin-fill"></i>
+                    2271 Av. J. Hoffman, Lilburn 30074
+                </li>
+                <li>
+                    <i class="ri-time-fill"></i>
+                    <div class="d-block">
+                        <div class="d-block">Monday - Friday</div>
+                        <div class="d-block">8.00 am - 6.00 pm</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="contact__image">
+            <img src={woman.src} alt="">
+        </div>
+    </div>
+</section>
+<style>
+    .section__contact {
+        min-height: 100vh;
+        padding: 2.5rem 0;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .contact__grid {
+        margin-top: 5rem;
+        max-width: var(--max-width);
+        display: grid;
+        gap: 0 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+    .contact__info {
+        display: flex;
+        padding: 1rem .5rem;
+        flex-direction: column;
+    }
+    .info__title {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .info__title span {
+        font-weight: 600;
+    }
+    .info__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        gap: 2rem;
+    }
+    .info__list li {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .info__list li i {
+        margin-right: .6rem;
+        font-size: 1.5rem;
+        color: var(--primary-color-dark);
+    }
+
+    .contact__image {
+        display: flex;
+        justify-content: center;
+        background: var(--primary-color);
+        /* background: #195eff; */
+        width: 480px;
+        height: 460px;
+        position: relative;
+        border-radius: 3px;
+    }
+    .contact__image img {
+        height: 520px;
+        width: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(20%);
+    }
+</style>

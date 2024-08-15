@@ -1,0 +1,116 @@
+---
+import avatar from '../assets/images/leaf-logo.svg';
+// import cover from '../assets/images/footer-cover.jpg';
+---
+
+<footer id="footer">
+    <section class="footer__container">
+        <div class="footer__logo">
+            <a href="" class="logo">
+                <img src={avatar.src} alt="">
+                Agro
+                <span>Lab</span>
+            </a>
+        </div>
+        <div class="footer__content">
+            <ul class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Team</a>
+                <a href="">Contact</a>
+            </ul>
+        </div>
+        <div class="footer__sub">
+            <a href="" class="footer__link">
+                Frank-Hz. All rights reserved.  
+            </a>
+            <ul class="term__links">
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+                <a href="">Cookies</a>
+            </ul>
+        </div>
+    </section>
+</footer>
+<style>
+    footer {
+        max-height: 240px;
+        background: var(--text-dark);
+        display: flex;
+        justify-content: center;
+    }
+    .footer__container {
+        max-width: var(--max-width);
+        width: 100%;
+        padding: 2rem 1rem;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+    }
+    .footer__logo {
+        display: flex;
+    }
+    .logo {
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .logo span {
+        color: #fff;
+    }
+    .footer__content {
+        padding: 1rem 0;
+    }
+    .links {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .links a {
+        color: var(--text-light);
+        font-size: .95rem;
+        font-weight: 500;
+        transition: .2s;
+    }
+    .links a:hover {
+        color: #fff;
+    }
+    .footer__sub {
+        margin-top: .2rem;
+        padding: 1rem 0;
+        border-top: 1px solid #647290;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-self: end;
+    }
+    .footer__link {
+        color: var(--text-light);
+        font-weight: 600;
+        font-size: .95rem;
+    }
+    .term__links {
+        display: flex;
+        gap: .5rem;
+    }
+    .term__links a {
+        color: var(--text-light);
+        font-size: .95rem;
+        font-weight: 500;
+        transition: .2s;
+    }
+    .term__links a:hover {
+        color: #fff;
+    }
+</style>

@@ -1,0 +1,129 @@
+---
+import avatar from '../assets/images/leaf-logo.svg';
+---
+<nav>
+    <a href="" class="nav__logo">
+        <img src={avatar.src} alt="">
+        Agro
+        <span>Lab</span>
+    </a>
+    <button class="nav-toggle">
+        <i class="ri-menu-line"></i>
+    </button>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#home">
+                Home 
+                <span></span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#about">
+                About
+                <span></span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#team">
+                Team
+                <span></span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#contact">
+                Contact Us
+                <span></span>
+            </a>
+        </li>
+    </ul>
+    <button class="btn btn-primary">
+        Login
+    </button>
+</nav>
+<style>
+    nav {
+        padding: 1.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: var(--max-width);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-toggle {
+        outline: none;
+        border: none;
+        background: transparent;
+        padding: .4rem .6rem;
+        color: var(--text-dark);
+        cursor: pointer;
+        display: none;
+        transition: .3s;
+    }
+    .nav-toggle span,
+    .nav-toggle i {
+        font-size: 1.6rem;
+        pointer-events: none;
+    }
+    .nav-toggle:hover {
+        color: var(--primary-color);
+    }
+    .nav__logo {
+        text-decoration: none;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    .nav__logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .nav__logo span {
+        color: var(--text-dark);
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+    }
+    .menu a {
+        padding: 0 1rem;
+        transition: .2s;
+        color: var(--text-dark);
+        font-size: .95rem;
+        font-weight: 500;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        padding-bottom: .5rem;
+    }
+    .menu a span {
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        min-width: 35px;
+        background: transparent;
+        transition: .3s;        
+    }
+    .menu a:hover span {
+        background: var(--primary-color);
+    }
+
+    @media (width < 900px) {
+        .menu {
+            display: none;
+        }
+        .nav-toggle {
+            display: inline-flex;
+        }
+    }    
+</style>

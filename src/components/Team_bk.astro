@@ -1,0 +1,223 @@
+---
+import member_1 from '../assets/images/member-1.webp';
+import member_2 from '../assets/images/member-2.webp';
+import member_3 from '../assets/images/member-3.webp';
+import member_4 from '../assets/images/member-4.webp';
+---
+
+<section id="team" class="team__container">
+    <div class="team__group">
+        <h1 class="section__title text-center">We Have Awesome <span class="text-primary">Team</span> to Help</h1>
+        <div class="team__grid">
+            <div class="member__card">
+                <div class="member__header">
+                    <div class="member__image">
+                        <img src={member_1.src} alt="">
+                    </div>
+                </div>
+                <div class="member__content">
+                    <h3>Timothy Harper</h3>
+                    <span class="member__rol">Agro Engineer</span>
+                    <div class="member__phone">
+                        <i class="ri-phone-fill"></i> +097 458 787 965
+                    </div>
+                    <a href="" class="member__link">
+                        Read More <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="member__card">
+                <div class="member__header">
+                    <div class="member__image">
+                        <img src={member_2.src} alt="">
+                    </div>
+                </div>
+                <div class="member__content">
+                    <h3>Edgar Collins</h3>
+                    <span class="member__rol">Agricultural Engineer</span>
+                    <div class="member__phone">
+                        <i class="ri-phone-fill"></i> +097 458 787 965
+                    </div>
+                    <a href="" class="member__link">
+                        Read More <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="member__card">
+                <div class="member__header">
+                    <div class="member__image">
+                        <img src={member_3.src} alt="">
+                    </div>
+                </div>
+                <div class="member__content">
+                    <h3>Rowena Reccoba</h3>
+                    <span class="member__rol">Environmental Engineer</span>
+                    <div class="member__phone">
+                        <i class="ri-phone-fill"></i> +097 458 787 965
+                    </div>
+                    <a href="" class="member__link">
+                        Read More <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>            
+            </div>
+            <div class="member__card">
+                <div class="member__header">
+                    <div class="member__image">
+                        <img src={member_4.src} alt="">
+                    </div>
+                </div>
+                <div class="member__content">
+                    <h3>Alfred Zommer</h3>
+                    <span class="member__rol">Data Analyst</span>
+                    <div class="member__phone">
+                        <i class="ri-phone-fill"></i> +097 458 787 965
+                    </div>
+                    <a href="" class="member__link">
+                        Read More <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback__group">
+        <h1 class="section__title text-center">What's Our Clients Say</h1>
+        <div class="feedback__grid">
+            <div class="feedback__card">
+                <div class="feedback__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto, facilis accusantium voluptate a adipisci cupiditate laborum excepturi.
+                </div>
+                <div class="feedback__user">
+                    <h3>Albert Webster</h3>
+                    <span class="feedback__user__rol">Student</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .team__container {
+        min-height: 100vh;
+        position: relative;    
+        padding: 2.5rem 0 .5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .team__container::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0%;
+        transform: translateY(80%);
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: -2;
+        background: url('../assets/images/team-cover.jpg');
+        background-position: center;
+    }
+    .team__container::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0%;
+        transform: translateY(80%);
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: -1;
+        opacity: .4;
+        background: var(--optional);
+    }
+
+    .team__grid {
+        max-width: var(--max-width);
+        z-index: 1;
+        width: 100%;
+        display: grid;
+        margin-top: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 .4rem;
+    }
+    .member__card {
+        background: #fff;
+        border-radius: 10px;
+        height: 380px;
+        max-height: 380px;
+        /* max-width: 420px; */
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    }
+    .member__header {
+        display: flex;
+        align-items: center;
+        align-items: flex-end;
+        justify-content: center;
+        height: 50%;
+    }
+    .member__image {
+        height: 152px;
+        width: 152px;
+        padding: 6px;
+        border-radius: 50%;
+        display: inline-block;
+        background: #fff;
+        border: 1px dashed var(--primary-color);
+    }    
+    .member__image img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    .member__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .8rem 0;
+        justify-content: center;
+        height: 50%;
+    }
+    .member__content h3 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--text-dark);
+    }
+    .member__content .member__rol {
+        font-size: .9rem;
+        line-height: 0.75rem;
+        color: var(--text-gray);
+        font-weight: 500;
+        text-align: center;
+    }
+    .member__content .member__phone {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1rem;
+        color: var(--text-dark);
+    }
+    .member__content .member__phone i,
+    .member__content .member__phone span {
+
+    }
+    .member__link {
+        font-size: .95rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        transition: .1s;
+    }
+    .member__link:hover {
+        color: var(--primary-color-dark);
+    }
+    @media (width < 1200px) {
+        .team__grid {
+            /* grid-template-columns: repeat(2, 1fr); */
+            /* gap: 1rem; */
+        }
+    }
+</style>
